@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📊 Sentiment Analysis History</h1>
+
+    <a href="/">
+        <button>⬅ Back to Analyzer</button>
+    </a>
+
+    <br><br>
+
+    <table border="1" width="100%" cellpadding="10">
+
+        <tr>
+            <th>Text</th>
+            <th>Sentiment</th>
+            <th>Confidence</th>
+            <th>Date</th>
+        </tr>
+
+        {% for item in history %}
+
+        <tr>
+            <td>{{ item.text }}</td>
+            <td>{{ item.sentiment }}</td>
+            <td>{{ item.confidence }}%</td>
+            <td>{{ item.date.strftime("%d-%m-%Y %H:%M") }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+</body>
+</html>

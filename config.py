@@ -1,0 +1,1 @@
+MONGO_URI = "mongodb+srv://aagni5456_db_user:h2bErZmNauVSoTwx@cluster0.mqacbf5.mongodb.net/sentimentDB?retryWrites=true&w=majority&appName=Cluster0"
